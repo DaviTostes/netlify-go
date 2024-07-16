@@ -1,5 +1,5 @@
 [build]
-  command = "chmod a+x ./build.sh && ./build.sh"
+  command = "go build && ./netlify-test -port 80"
   functions = "functions"
   publish = "public"
 
