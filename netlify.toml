@@ -1,12 +1,12 @@
 [build]
-  command= "go build && ./nelify-test -port 8080"
+  command = "go build && ./netlify-test -port 8080"
   functions = "functions"
   publish = "public"
 
 [build.environment]
-  GO_IMPORT_PATH = 'github.com/DaviTostes/netlify-go'
-  GO111MODULE = 'on'
-  GO_VERSION = '1.22'
+  GO_IMPORT_PATH = "github.com/DaviTostes/netlify-go"
+  GO111MODULE = "on"
+  GO_VERSION = "1.22"
 
 [[redirects]]
   from = "/api/*"
