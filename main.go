@@ -2,7 +2,6 @@ package main
 
 import (
 	"flag"
-	"html/template"
 	"log"
 	"net/http"
 )
@@ -10,9 +9,8 @@ import (
 func main() {
 	port := flag.String("port", "-1", "port to listen on")
 	flag.Parse()
-	tmpl, _ := template.ParseFiles("./public/index.html")
 	http.HandleFunc("/api", func(w http.ResponseWriter, r *http.Request) {
-		tmpl.Execute(w, struct{ Text string }{Text: "Testando"})
+    w.Write([]byte("Hello, World!"))
 	})
 	log.Fatal(http.ListenAndServe(":"+*port, nil))
 }
