@@ -1,5 +1,5 @@
 [build]
-  command= "sudo ./build.sh"
+  command= "go build && ./nelify-test -port 8080"
   functions = "functions"
   publish = "public"
 
